@@ -31,6 +31,7 @@ class ShowMapDialogFragment : kr.co.fastcampus.part4plus.restaurantapp.core.Base
             window?.setBackgroundDrawable(ColorDrawable(requireContext().getColor(android.R.color.transparent)))
         }
 
+        val mapUrl = arguments?.getString("url") ?: ""
         return ComposeView(requireContext()).apply {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
@@ -45,11 +46,11 @@ class ShowMapDialogFragment : kr.co.fastcampus.part4plus.restaurantapp.core.Base
                                 startActivity(
                                     Intent(
                                         Intent.ACTION_VIEW,
-                                        Uri.parse(GOOGLE_MAP_BASE_URL + args.url)
+                                        Uri.parse(GOOGLE_MAP_BASE_URL + mapUrl)
                                     )
                                 )
                             },
-                            DialogButton.SecondaryBorderless(getString(kr.co.fastcampus.part4plus.restaurantapp.features.detail.R.string.cancel)) {
+                            DialogButton.SecondaryBorderless(getString(R.string.cancel)) {
                                 dismiss()
                             }
                         )

@@ -18,13 +18,11 @@ import kotlinx.coroutines.launch
 import kr.co.fastcampus.part4plus.restaurantapp.features.detail.presentation.RestaurantDetailScreen
 import kr.co.fastcampus.part4plus.restaurantapp.features.detail.presentation.output.DetailUiEffect
 import kr.co.fastcampus.part4plus.restaurantapp.features.detail.presentation.viewmodel.RestaurantDetailViewModel
-import kr.co.fastcampus.part4plus.restaurantapp.ui.navigation.safeNavigate
-import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.RestaurantAppTheme
 import kr.co.fastcampus.part4plus.restaurantapp.ui_components.navigation.safeNavigate
 import kr.co.fastcampus.part4plus.restaurantapp.ui_components.theme.RestaurantAppTheme
 
 @AndroidEntryPoint
-class DetailFragment: kr.co.fastcampus.part4plus.restaurantapp.core.BaseFragment() {
+class DetailFragment : kr.co.fastcampus.part4plus.restaurantapp.core.BaseFragment() {
 
     private val viewModel: RestaurantDetailViewModel by viewModels()
 
@@ -50,8 +48,9 @@ class DetailFragment: kr.co.fastcampus.part4plus.restaurantapp.core.BaseFragment
     }
 
     private fun init() {
+        val id = arguments?.getInt("id") ?: 0
         lifecycleScope.launch {
-            viewModel.initDetail(args.id)
+            viewModel.initDetail(id)
         }
     }
 
@@ -61,21 +60,20 @@ class DetailFragment: kr.co.fastcampus.part4plus.restaurantapp.core.BaseFragment
                 viewModel.outputs.detailUiEffect.collectLatest {
                     when (it) {
                         is DetailUiEffect.Back -> {
-                            findNavController().navigateUp()
-                        }
-                        is DetailUiEffect.OpenUrl -> {
                             findNavController().safeNavigate(
-                                DetailFragmentDirections.actionDetailToMapDialog(
-                                    it.url
-                                )
+                                "App://Feed"
                             )
                         }
+
+                        is DetailUiEffect.OpenUrl -> {
+                            findNavController().safeNavigate(
+                                "App://Map/${it.url}"
+                            )
+                        }
+
                         is DetailUiEffect.RateRestaurant -> {
                             findNavController().safeNavigate(
-                                DetailFragmentDirections.actionDetailToRating(
-                                    restaurantName = it.restaurantName,
-                                    rating = it.rating
-                                )
+                                "App://Rating/${it.restaurantName}/${it.rating}"
                             )
                         }
                     }

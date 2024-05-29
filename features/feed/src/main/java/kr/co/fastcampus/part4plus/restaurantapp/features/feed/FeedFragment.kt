@@ -17,8 +17,6 @@ import kotlinx.coroutines.launch
 import kr.co.fastcampus.part4plus.restaurantapp.features.feed.presentation.output.FeedUiEffect
 import kr.co.fastcampus.part4plus.restaurantapp.features.feed.presentation.screen.FeedScreen
 import kr.co.fastcampus.part4plus.restaurantapp.features.feed.presentation.viewmodel.FeedViewModel
-import kr.co.fastcampus.part4plus.restaurantapp.ui.navigation.safeNavigate
-import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.RestaurantAppTheme
 import kr.co.fastcampus.part4plus.restaurantapp.ui_components.navigation.safeNavigate
 import kr.co.fastcampus.part4plus.restaurantapp.ui_components.theme.RestaurantAppTheme
 
@@ -57,12 +55,12 @@ class FeedFragment: kr.co.fastcampus.part4plus.restaurantapp.core.BaseFragment()
                     when (it) {
                         is FeedUiEffect.OpenRestaurantDetail -> {
                             navController.safeNavigate(
-                                FeedFragmentDirections.actionFeedToDetail(it.id)
+                                "App://Detail/${it.id}"
                             )
                         }
                         is FeedUiEffect.OpenInfoDialog -> {
                             navController.safeNavigate(
-                                FeedFragmentDirections.actionFeedToInfo()
+                                "App://Notice"
                             )
                         }
                     }

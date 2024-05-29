@@ -33,8 +33,8 @@ class RatingDialogFragment : kr.co.fastcampus.part4plus.restaurantapp.core.BaseD
                     themeState = themeViewModel.themeState.collectAsState()
                 ) {
                     DialogPopup.Rating(
-                        restaurantName = args.restaurantName,
-                        rating = args.rating,
+                        restaurantName = arguments?.getString("restaurantName") ?: "",
+                        rating = arguments?.getFloat("rating") ?: 0f,
                         buttons = listOf(
                             DialogButton.Primary(
                                 title = getString(R.string.submit),
@@ -45,7 +45,7 @@ class RatingDialogFragment : kr.co.fastcampus.part4plus.restaurantapp.core.BaseD
                             ) {
                                 dismiss()
                             },
-                            DialogButton.Secondary(getString(kr.co.fastcampus.part4plus.restaurantapp.features.detail.R.string.cancel)) {
+                            DialogButton.Secondary(getString(R.string.cancel)) {
                                 dismiss()
                             }
                         )
