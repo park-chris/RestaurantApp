@@ -21,7 +21,7 @@ import kr.co.fastcampus.part4plus.restaurantapp.ui.models.dialog.DialogButton
 import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.RestaurantAppTheme
 
 @AndroidEntryPoint
-class ShowMapDialogFragment : BaseDialogFragment() {
+class ShowMapDialogFragment : kr.co.fastcampus.part4plus.restaurantapp.core.BaseDialogFragment() {
 
     private val args: ShowMapDialogFragmentArgs by navArgs()
 

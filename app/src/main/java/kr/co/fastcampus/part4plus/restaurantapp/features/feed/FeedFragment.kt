@@ -22,7 +22,7 @@ import kr.co.fastcampus.part4plus.restaurantapp.ui.navigation.safeNavigate
 import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.RestaurantAppTheme
 
 @AndroidEntryPoint
-class FeedFragment: BaseFragment() {
+class FeedFragment: kr.co.fastcampus.part4plus.restaurantapp.core.BaseFragment() {
     private val viewModel: FeedViewModel by viewModels()
 
     override fun onCreateView(
