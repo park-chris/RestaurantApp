@@ -1,13 +1,13 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.di
+package kr.co.fastcampus.part4plus.restaurantapp.core.di
 
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.network.api.IRestaurantAppNetworkApi
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.network.api.RestaurantAppNetworkApi
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.repository.IRestaurantDataSource
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.repository.RestaurantRepository
+import kr.co.fastcampus.part4plus.restaurantapp.core.network.api.IRestaurantAppNetworkApi
+import kr.co.fastcampus.part4plus.restaurantapp.core.network.api.RestaurantAppNetworkApi
+import kr.co.fastcampus.part4plus.restaurantapp.core.repository.IRestaurantDataSource
+import kr.co.fastcampus.part4plus.restaurantapp.core.repository.RestaurantRepository
 import javax.inject.Singleton
 
 @Module

@@ -1,4 +1,4 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.dialogs
+package kr.co.fastcampus.part4plus.restaurantapp.features.feed.dialog
 
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.res.stringResource
 import dagger.hilt.android.AndroidEntryPoint
-import kr.co.fastcampus.part4plus.restaurantapp.BaseDialogFragment
+import kr.co.fastcampus.part4plus.restaurantapp.core.BaseDialogFragment
 import kr.co.fastcampus.part4plus.restaurantapp.R
 import kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog.Alert
 import kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog.DialogPopup

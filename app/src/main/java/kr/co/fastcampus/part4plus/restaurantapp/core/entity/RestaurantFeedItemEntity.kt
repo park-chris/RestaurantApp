@@ -1,4 +1,4 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.entity
+package kr.co.fastcampus.part4plus.restaurantapp.core.entity
 
 import java.io.Serializable
 

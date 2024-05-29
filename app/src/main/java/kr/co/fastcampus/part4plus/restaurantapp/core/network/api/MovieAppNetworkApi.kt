@@ -1,7 +1,7 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.network.api
+package kr.co.fastcampus.part4plus.restaurantapp.core.network.api
 
 import com.google.gson.reflect.TypeToken
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.network.model.RestaurantResponse
+import kr.co.fastcampus.part4plus.restaurantapp.core.network.model.RestaurantResponse
 import kr.co.fastcampus.part4plus.restaurantapp.library.network.model.ApiResult
 import kr.co.fastcampus.part4plus.restaurantapp.library.network.retrofit.NetworkRequestFactory
 import javax.inject.Inject

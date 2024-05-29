@@ -1,6 +1,6 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.mapper
+package kr.co.fastcampus.part4plus.restaurantapp.core.mapper
 
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.entity.EntityWrapper
+import kr.co.fastcampus.part4plus.restaurantapp.core.entity.EntityWrapper
 import kr.co.fastcampus.part4plus.restaurantapp.library.network.model.ApiResponse
 import kr.co.fastcampus.part4plus.restaurantapp.library.network.model.ApiResult
 

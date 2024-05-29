@@ -1,4 +1,4 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.network.model
+package kr.co.fastcampus.part4plus.restaurantapp.core.network.model
 
 import com.google.gson.annotations.SerializedName
 

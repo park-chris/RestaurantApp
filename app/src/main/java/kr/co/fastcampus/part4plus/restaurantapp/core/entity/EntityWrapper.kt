@@ -1,4 +1,4 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.entity
+package kr.co.fastcampus.part4plus.restaurantapp.core.entity
 
 sealed class EntityWrapper<T> {
     data class Success<T>(val entity: T) : EntityWrapper<T>()

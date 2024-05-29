@@ -1,9 +1,9 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.repository
+package kr.co.fastcampus.part4plus.restaurantapp.core.repository
 
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.entity.CategoryEntity
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.entity.EntityWrapper
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.entity.RestaurantDetailEntity
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.network.api.IRestaurantAppNetworkApi
+import kr.co.fastcampus.part4plus.restaurantapp.core.entity.CategoryEntity
+import kr.co.fastcampus.part4plus.restaurantapp.core.entity.EntityWrapper
+import kr.co.fastcampus.part4plus.restaurantapp.core.entity.RestaurantDetailEntity
+import kr.co.fastcampus.part4plus.restaurantapp.core.network.api.IRestaurantAppNetworkApi
 import kr.co.fastcampus.part4plus.restaurantapp.features.feed.data.FeedConstants
 import kr.co.fastcampus.part4plus.restaurantapp.features.feed.data.mapper.CategoryMapper
 import kr.co.fastcampus.part4plus.restaurantapp.library.storage.IStorage

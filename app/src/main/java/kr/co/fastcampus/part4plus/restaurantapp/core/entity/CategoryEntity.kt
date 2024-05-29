@@ -1,4 +1,4 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.entity
+package kr.co.fastcampus.part4plus.restaurantapp.core.entity
 
 data class CategoryEntity(
     val id: Int,

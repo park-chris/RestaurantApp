@@ -1,6 +1,6 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.network.api
+package kr.co.fastcampus.part4plus.restaurantapp.core.network.api
 
-import kr.co.fastcampus.part4plus.restaurantapp.features.common.network.model.RestaurantResponse
+import kr.co.fastcampus.part4plus.restaurantapp.core.network.model.RestaurantResponse
 import kr.co.fastcampus.part4plus.restaurantapp.library.network.model.ApiResult
 
 interface IRestaurantAppNetworkApi {

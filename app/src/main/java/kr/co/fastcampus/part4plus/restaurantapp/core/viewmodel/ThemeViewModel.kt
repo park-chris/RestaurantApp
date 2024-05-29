@@ -1,4 +1,4 @@
-package kr.co.fastcampus.part4plus.restaurantapp.features.common.viewmodel
+package kr.co.fastcampus.part4plus.restaurantapp.core.viewmodel
 
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModel
