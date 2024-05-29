@@ -4,6 +4,22 @@ plugins {
 
 apply from: "../base-build.gradle"
 
+android {
+    flavorDimensions "theme"
+
+    productFlavors {
+        red {
+            isDefault = true
+            dimension "theme"
+            applicationId "kr.co.fastcampus.part4plus.restaurantapp.red"
+        }
+        blue {
+            dimension "theme"
+            applicationId "kr.co.fastcampus.part4plus.restaurantapp.blue"
+        }
+    }
+}
+
 dependencies {
     // app 단에서 모듈 가져오기
     implementation(project(path: ':features:detail'))
