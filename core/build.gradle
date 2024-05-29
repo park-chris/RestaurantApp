@@ -7,9 +7,12 @@ apply from: "../base-build.gradle"
 dependencies {
     implementation(project(path: ':libraries:network-contract'))
     implementation(project(path: ':libraries:storage-contract'))
+    api api(project(path: ':ui-components'))
 
     // api를 사용하면 core에서도 해당 모듈을 사용할 수 있지만
     // core를 모듈로 상속받는 모듈에서도 해당 모듈을 사용할 수 있다.
     // !! 함부로 사용하면 안됨
-    api(project(path: ':ui-components'))
+
+    // Gson
+    implementation "com.google.code.gson:gson:$gson_version"
 }

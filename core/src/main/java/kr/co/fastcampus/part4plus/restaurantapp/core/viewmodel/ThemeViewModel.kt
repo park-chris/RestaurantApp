@@ -5,9 +5,9 @@ import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kr.co.fastcampus.part4plus.restaurantapp.ui.config.ComponentConfig
-import kr.co.fastcampus.part4plus.restaurantapp.ui.config.DefaultComponentConfig
-import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.color.ColorSet
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.config.ComponentConfig
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.config.DefaultComponentConfig
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.theme.color.ColorSet
 import javax.inject.Inject
 
 @HiltViewModel
