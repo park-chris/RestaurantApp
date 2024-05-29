@@ -16,7 +16,10 @@
             <option value="$PROJECT_DIR$/features/detail" />
             <option value="$PROJECT_DIR$/features/feed" />
             <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/network" />
+            <option value="$PROJECT_DIR$/libraries/network_contract" />
             <option value="$PROJECT_DIR$/libraries/storage" />
+            <option value="$PROJECT_DIR$/libraries/storage_contract" />
             <option value="$PROJECT_DIR$/ui_components" />
           </set>
         </option>
