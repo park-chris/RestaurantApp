@@ -1,79 +1,49 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'androidx.navigation.safeargs.kotlin'
-    id 'dagger.hilt.android.plugin'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-}
-
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
-
     compileSdk 33
 
     defaultConfig {
         minSdk 28
         targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles 'consumer-rules.pro'
+        vectorDrawables {
+            useSupportLibrary true
+        }
     }
 
     buildTypes {
-        debug {
-            isDefault = true
-            debuggable true
-            minifyEnabled false
-        }
         release {
-            minifyEnabled true
-            zipAlignEnabled true
-            shrinkResources false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '11'
-        freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+        jvmTarget = '1.8'
     }
-
-    testOptions {
-        unitTests {
-            includeAndroidResources = true
-            unitTests.returnDefaultValues = true
-        }
-    }
-
-    lint {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
-    packagingOptions {
-        jniLibs {
-            excludes += ['META-INF/*', '**/kotlin/**']
-        }
-        resources {
-            excludes += ['META-INF/*', '**/kotlin/**', '**/*.txt']
-        }
-    }
-
     buildFeatures {
-        viewBinding true
         compose true
     }
-
     composeOptions {
-        kotlinCompilerExtensionVersion "$versions.kotlin_compiler_extension_version"
+        kotlinCompilerExtensionVersion '1.4.1'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
     }
 }
-
-
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:$kotlin_version"))
@@ -93,10 +63,37 @@ dependencies {
     // Timber
     implementation "com.jakewharton.timber:timber:$timber_version"
 
+    // Test
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+    // LifeCycle
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // Coil
+    implementation "io.coil-kt:coil-compose:$coil_version"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Compose
+    api "androidx.compose.ui:ui:$compose_ui_version"
+    api "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
+    api "androidx.compose.material:material:$compose_material_version"
+    api "androidx.activity:activity-compose:$activity_compose_version"
+
+    // Hilt
+    api "com.google.dagger:hilt-android:$hilt_version"
+    api "androidx.hilt:hilt-navigation-fragment:1.0.0"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$timber_version"
 }
