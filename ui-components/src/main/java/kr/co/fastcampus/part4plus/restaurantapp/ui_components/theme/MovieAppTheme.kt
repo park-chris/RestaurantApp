@@ -9,10 +9,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
-import kr.co.fastcampus.part4plus.restaurantapp.ui.config.ComponentConfig
-import kr.co.fastcampus.part4plus.restaurantapp.ui.config.DefaultComponentConfig
-import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.color.ColorSet
-import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.color.MyColors
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.config.ComponentConfig
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.config.DefaultComponentConfig
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.theme.color.ColorSet
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.theme.color.MyColors
 
 private val LocalColors = staticCompositionLocalOf { ColorSet.Red.LightColors }
 

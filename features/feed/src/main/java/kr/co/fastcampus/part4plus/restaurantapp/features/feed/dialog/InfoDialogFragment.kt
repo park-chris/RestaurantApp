@@ -10,12 +10,11 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.res.stringResource
 import dagger.hilt.android.AndroidEntryPoint
-import kr.co.fastcampus.part4plus.restaurantapp.core.BaseDialogFragment
-import kr.co.fastcampus.part4plus.restaurantapp.R
-import kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog.Alert
-import kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog.DialogPopup
-import kr.co.fastcampus.part4plus.restaurantapp.ui.models.dialog.DialogButton
-import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.RestaurantAppTheme
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.R
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.components.dialog.Alert
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.components.dialog.DialogPopup
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.models.dialog.DialogButton
+import kr.co.fastcampus.part4plus.restaurantapp.ui_components.theme.RestaurantAppTheme
 
 @AndroidEntryPoint
 class InfoDialogFragment : kr.co.fastcampus.part4plus.restaurantapp.core.BaseDialogFragment() {
@@ -34,7 +33,7 @@ class InfoDialogFragment : kr.co.fastcampus.part4plus.restaurantapp.core.BaseDia
                     themeState = themeViewModel.themeState.collectAsState()
                 ) {
                     DialogPopup.Alert(
-                        title = stringResource(R.string.app_name),
+                        title = stringResource(kr.co.fastcampus.part4plus.restaurantapp.features.feed.R.string.app_name),
                         bodyText = stringResource(R.string.info_message),
                         buttons = listOf(
                             DialogButton.UnderlinedText(getString(R.string.close)) {
